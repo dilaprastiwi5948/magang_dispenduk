@@ -182,7 +182,7 @@ class ReportingController extends Controller
 
         $toast = array(
             'typeToast' => 'success',
-            'messageToast' => !$data->first()->deleted_at ? 'Berhasil mengembalikan data.' : 'Berhasil menghapus data.',
+            'messageToast' => 'Berhasil menghapus data.',
         );
         return redirect()->route($this->baseRoute.'index')->with($toast);
     }

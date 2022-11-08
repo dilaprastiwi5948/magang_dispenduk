@@ -32,7 +32,7 @@ class ReportingController extends Controller
         return view($this->viewFolder . "index", [
             'title' => $this->viewName,
             'baseroute' => $this->baseRoute,
-            'breadcrumb' => ['Home' => route('operator.dashboard'), 'Reporting' => null],
+            'breadcrumb' => ['home' => route('operator.dashboard'), 'reporting' => null],
             'datas' => $this->model->with(['explanationtype', 'reportingtype', 'submissiontype', 'user'])->where('created_by', auth()->user()->id)->orderBy('created_at', 'desc')->get()
         ]);
     }
@@ -47,7 +47,7 @@ class ReportingController extends Controller
         return view($this->viewFolder . "create", [
             'title' => $this->viewName,
             'baseroute' => $this->baseRoute,
-            'breadcrumb' => ['Home' => route('operator.dashboard'), 'Reporting' => route($this->baseRoute.'index'), 'Create' => null],
+            'breadcrumb' => ['home' => route('operator.dashboard'), 'reporting' => route($this->baseRoute.'index'), 'create' => null],
             'reportingtype' => ReportingType::get(),
             'submissiontype' => SubmissionType::get(),
             'explanationtype' => ExplanationType::get(),
@@ -102,7 +102,7 @@ class ReportingController extends Controller
         return view($this->viewFolder . "show", [
             'title' => $this->viewName,
             'baseroute' => $this->baseRoute,
-            'breadcrumb' => ['Home' => route('operator.dashboard'), 'Reporting' => route($this->baseRoute.'index'), 'Detail' => null],
+            'breadcrumb' => ['home' => route('operator.dashboard'), 'reporting' => route($this->baseRoute.'index'), 'detail' => null],
             'data' => $data
         ]);
     }
@@ -118,7 +118,7 @@ class ReportingController extends Controller
         return view($this->viewFolder . "update", [
             'title' => $this->viewName,
             'baseroute' => $this->baseRoute,
-            'breadcrumb' => ['Home' => route('operator.dashboard'), 'Reporting' => route($this->baseRoute.'index'), 'Edit' => null],
+            'breadcrumb' => ['home' => route('operator.dashboard'), 'reporting' => route($this->baseRoute.'index'), 'edit' => null],
             'reportingtype' => ReportingType::get(),
             'submissiontype' => SubmissionType::get(),
             'explanationtype' => ExplanationType::get(),
@@ -182,7 +182,7 @@ class ReportingController extends Controller
 
         $toast = array(
             'typeToast' => 'success',
-            'messageToast' => !$data->first()->deleted_at ? 'Berhasil mengembalikan data.' : 'Berhasil menghapus data.',
+            'messageToast' => 'Berhasil menghapus data.',
         );
         return redirect()->route($this->baseRoute.'index')->with($toast);
     }

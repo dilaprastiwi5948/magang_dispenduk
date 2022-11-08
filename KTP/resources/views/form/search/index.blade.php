@@ -19,8 +19,6 @@
                             <label for="nik">NIK Pelapor</label>
                             <input type="text" name="nik" id="nik" class="form-control">
                         </div>
-                    </div>
-                    <div class="col-sm-6">
                         <div class="form-group ">
                             <label for="reportingtype_id">Jenis Pelaporan</label>
                             <select class="form-control" id="reportingtype_id" name="reportingtype_id">
@@ -29,6 +27,8 @@
                                 @endforeach
                             </select>
                         </div>
+                    </div>
+                    <div class="col-sm-6">                       
                         <div class="form-group">
                             <label for="explanationtype_id">Jenis Pengajuan</label>
                             <select class="form-control" id="explanationtype_id" name="explanationtype_id">

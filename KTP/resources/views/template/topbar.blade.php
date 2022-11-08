@@ -6,7 +6,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="#"><strong><i class="icon fa fa-credit-card"></i> PELAPORAN KTP</strong></a>
+        <div class="navbar-brand"><strong><i class="icon fa fa-credit-card"></i> PELAPORAN KTP</strong></div>
         <div id="sideNav" href="">
             <i class="fa fa-bars icon"></i>
         </div>
