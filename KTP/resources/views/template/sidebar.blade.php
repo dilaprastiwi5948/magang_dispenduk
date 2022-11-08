@@ -9,7 +9,7 @@
                     <a class="@if(request()->routeis('admin.reporting.*')) active-menu @endif" href="{{route('admin.reporting.index')}}"><i class="fa fa-credit-card"></i> Pelaporan KTP</a>
                 </li>
                 <li>
-                    <a class="@if(request()->routeis('operator.search.*')) active-menu @endif" href="{{route('operator.search.index')}}"><i class="fa fa-credit-card"></i> Pencarian Data</a>
+                    <a class="@if(request()->routeis('operator.search.*')) active-menu @endif" href="{{route('operator.search.index')}}"><i class="fa fa-search"></i> Pencarian Data</a>
                 </li>
                 <li>
                     <a class="@if(request()->routeis('admin.report.*')) active-menu @endif" href="{{route('admin.report.dailyreport')}}"><i class="fa fa-files-o"></i> Laporan harian</a>
@@ -38,10 +38,10 @@
                     <a class="@if(request()->routeis('operator.dashboard')) active-menu @endif" href="{{route('operator.dashboard')}}"><i class="fa fa-dashboard"></i> Dashboard</a>
                 </li>
                 <li>
-                    <a class="@if(request()->routeis('operator.reporting.*')) active-menu @endif" href="{{route('operator.reporting.index')}}"><i class="fa fa-credit-card"></i> Pelaporan KTP</a>
+                    <a class="@if(request()->routeis('operator.reporting.*')) active-menu @endif" href="{{route('operator.reporting.index')}}"><i class="fa fa-file-text"></i> Pelaporan KTP</a>
                 </li>
                 <li>
-                    <a class="@if(request()->routeis('operator.search.*')) active-menu @endif" href="{{route('operator.search.index')}}"><i class="fa fa-credit-card"></i> Pencarian Data</a>
+                    <a class="@if(request()->routeis('operator.search.*')) active-menu @endif" href="{{route('operator.search.index')}}"><i class="fa fa-search"></i> Pencarian Data</a>
                 </li>
             </ul>
         @endif
