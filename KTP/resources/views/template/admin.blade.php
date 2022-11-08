@@ -59,7 +59,7 @@
                     @yield('content')
                 </div>
             </div>
-            <footer><p>All right reserved. Template by: <a href="http://webthemez.com">WebThemez.com</a></p></footer>
+            <footer><p>All right reserved. Copyright: <a href="http://dispendukcapil.malangkota.go.id/">Dispendukcapil2022</a></p></footer>
         </div>
         <!-- /. PAGE INNER  -->
     </div>
