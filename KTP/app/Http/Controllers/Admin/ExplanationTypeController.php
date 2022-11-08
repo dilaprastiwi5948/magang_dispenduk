@@ -29,7 +29,7 @@ class ExplanationTypeController extends Controller
         return view($this->viewFolder . "index", [
             'title' => $this->viewName,
             'baseroute' => $this->baseRoute,
-            'breadcrumb' => ['home' => route('admin.dashboard'), 'explanationtypes' => null],
+            'breadcrumb' => ['Home' => route('admin.dashboard'), 'Explanationtypes' => null],
             'fields' => $this->model->getFillable(),
             'datas' => $this->model->withTrashed()->get()
         ]);
@@ -45,7 +45,7 @@ class ExplanationTypeController extends Controller
         return view($this->viewFolder . "create", [
             'title' => $this->viewName,
             'baseroute' => $this->baseRoute,
-            'breadcrumb' => ['home' => route('admin.dashboard'), 'explanationtypes' => route('admin.explanationtypes.index'), 'create' => null],
+            'breadcrumb' => ['Home' => route('admin.dashboard'), 'Explanationtypes' => route('admin.explanationtypes.index'), 'Create' => null],
         ]);
     }
 
@@ -92,7 +92,7 @@ class ExplanationTypeController extends Controller
         return view($this->viewFolder . "update", [
             'title' => $this->viewName,
             'baseroute' => $this->baseRoute,
-            'breadcrumb' => ['home' => route('admin.dashboard'), 'explanationtypes' => route($this->baseRoute.'index'), 'edit' => null],
+            'breadcrumb' => ['Home' => route('admin.dashboard'), 'Explanationtypes' => route($this->baseRoute.'index'), 'Edit' => null],
             'data' => $this->model->withTrashed()->whereId($id)->first()
         ]);
     }

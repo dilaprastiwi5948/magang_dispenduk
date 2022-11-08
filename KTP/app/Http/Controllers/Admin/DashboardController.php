@@ -29,7 +29,7 @@ class DashboardController extends Controller
             'title' => null,
             'subtitle' => null,
             'baseroute' => 'admin.dashboard',
-            'breadcrumb' => ['home' => route('admin.dashboard'), 'dashboard' => null],
+            'breadcrumb' => ['Home' => route('admin.dashboard'), 'Dashboard' => null],
             'data' => $data
         ]);
     }
@@ -40,7 +40,7 @@ class DashboardController extends Controller
             'title' => "Profile Admin",
             'subtitle' => null,
             'baseroute' => 'admin.dashboard',
-            'breadcrumb' => ['home' => route('admin.dashboard'), 'profile' => null],
+            'breadcrumb' => ['Home' => route('admin.dashboard'), 'Profile' => null],
             'user' => User::with('userdetail')->whereId(auth()->user()->id)->first()
         ]);
     }

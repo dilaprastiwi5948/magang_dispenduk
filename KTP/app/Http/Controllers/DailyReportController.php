@@ -42,7 +42,7 @@ class DailyReportController extends Controller
         return view($this->viewFolder. 'index', [
             'title' => $this->viewName,
             'baseroute' => $this->baseRoute,
-            'breadcrumb' => ['home' => route('admin.dashboard'), 'report' => null],
+            'breadcrumb' => ['Home' => route('admin.dashboard'), 'Report' => null],
             'data' => $data,
         ]);
     }

@@ -30,7 +30,7 @@ class OperatorController extends Controller
         return view($this->viewFolder . "index", [
             'title' => $this->viewName,
             'baseroute' => $this->baseRoute,
-            'breadcrumb' => ['home' => route('admin.dashboard'), 'opearator' => null],
+            'breadcrumb' => ['Home' => route('admin.dashboard'), 'Operator' => null],
             'datas' => $this->model->with('userdetail')->withTrashed()->get()
         ]);
     }
@@ -45,7 +45,7 @@ class OperatorController extends Controller
         return view($this->viewFolder . "create", [
             'title' => $this->viewName,
             'baseroute' => $this->baseRoute,
-            'breadcrumb' => ['home' => route('admin.dashboard'), 'opearator' => route($this->baseRoute.'index'), 'create' => null],
+            'breadcrumb' => ['Home' => route('admin.dashboard'), 'Operator' => route($this->baseRoute.'index'), 'Create' => null],
         ]);
     }
 
@@ -105,7 +105,7 @@ class OperatorController extends Controller
         return view($this->viewFolder . "update", [
             'title' => $this->viewName,
             'baseroute' => $this->baseRoute,
-            'breadcrumb' => ['home' => route('admin.dashboard'), 'opearator' => route($this->baseRoute.'index'), 'edit' => null],
+            'breadcrumb' => ['Home' => route('admin.dashboard'), 'Operator' => route($this->baseRoute.'index'), 'Edit' => null],
             'data' => $this->model->withTrashed()->with('userdetail')->whereId($id)->first()
         ]);
     }

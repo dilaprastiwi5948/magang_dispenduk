@@ -26,7 +26,7 @@ class SearchController extends Controller
         return view('form.search.index', [
             'title' => "Pencarian data",
             'baseroute' => auth()->user()->is_admin ? 'admin.search' : 'operator.search',
-            'breadcrumb' => ['home' => route((auth()->user()->is_admin ? 'admin.' : 'operator.') .'dashboard'), 'searching' => null],
+            'breadcrumb' => ['Home' => route((auth()->user()->is_admin ? 'admin.' : 'operator.') .'dashboard'), 'Searching' => null],
             'reportingtype' => ReportingType::get(),
             'submissiontype' => SubmissionType::get(),
             'explanationtype' => ExplanationType::get(),

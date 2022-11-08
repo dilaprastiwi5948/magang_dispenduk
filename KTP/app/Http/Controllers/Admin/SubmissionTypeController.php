@@ -30,7 +30,7 @@ class SubmissionTypeController extends Controller
         return view($this->viewFolder . "index", [
             'title' => $this->viewName,
             'baseroute' => $this->baseRoute,
-            'breadcrumb' => ['home' => route('admin.dashboard'), 'submissiontypes' => null],
+            'breadcrumb' => ['Home' => route('admin.dashboard'), 'Submissiontypes' => null],
             'fields' => $this->model->getFillable(),
             'datas' => $this->model->withTrashed()->get()
         ]);
@@ -46,7 +46,7 @@ class SubmissionTypeController extends Controller
         return view($this->viewFolder . "create", [
             'title' => $this->viewName,
             'baseroute' => $this->baseRoute,
-            'breadcrumb' => ['home' => route('admin.dashboard'), 'submissiontypes' => route('admin.submissiontypes.index'), 'create' => null],
+            'breadcrumb' => ['Home' => route('admin.dashboard'), 'Submissiontypes' => route('admin.submissiontypes.index'), 'Create' => null],
         ]);
     }
 
@@ -93,7 +93,7 @@ class SubmissionTypeController extends Controller
         return view($this->viewFolder . "update", [
             'title' => $this->viewName,
             'baseroute' => $this->baseRoute,
-            'breadcrumb' => ['home' => route('admin.dashboard'), 'submissiontypes' => route($this->baseRoute.'index'), 'edit' => null],
+            'breadcrumb' => ['Home' => route('admin.dashboard'), 'Submissiontypes' => route($this->baseRoute.'index'), 'Edit' => null],
             'data' => $this->model->withTrashed()->whereId($id)->first()
         ]);
     }

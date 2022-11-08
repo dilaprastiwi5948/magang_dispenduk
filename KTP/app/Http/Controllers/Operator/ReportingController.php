@@ -32,7 +32,7 @@ class ReportingController extends Controller
         return view($this->viewFolder . "index", [
             'title' => $this->viewName,
             'baseroute' => $this->baseRoute,
-            'breadcrumb' => ['home' => route('operator.dashboard'), 'reporting' => null],
+            'breadcrumb' => ['Home' => route('operator.dashboard'), 'Reporting' => null],
             'datas' => $this->model->with(['explanationtype', 'reportingtype', 'submissiontype', 'user'])->where('created_by', auth()->user()->id)->orderBy('created_at', 'desc')->get()
         ]);
     }
@@ -47,7 +47,7 @@ class ReportingController extends Controller
         return view($this->viewFolder . "create", [
             'title' => $this->viewName,
             'baseroute' => $this->baseRoute,
-            'breadcrumb' => ['home' => route('operator.dashboard'), 'reporting' => route($this->baseRoute.'index'), 'create' => null],
+            'breadcrumb' => ['Home' => route('operator.dashboard'), 'Reporting' => route($this->baseRoute.'index'), 'Create' => null],
             'reportingtype' => ReportingType::get(),
             'submissiontype' => SubmissionType::get(),
             'explanationtype' => ExplanationType::get(),
@@ -102,7 +102,7 @@ class ReportingController extends Controller
         return view($this->viewFolder . "show", [
             'title' => $this->viewName,
             'baseroute' => $this->baseRoute,
-            'breadcrumb' => ['home' => route('operator.dashboard'), 'reporting' => route($this->baseRoute.'index'), 'detail' => null],
+            'breadcrumb' => ['Home' => route('operator.dashboard'), 'Reporting' => route($this->baseRoute.'index'), 'Detail' => null],
             'data' => $data
         ]);
     }
@@ -118,7 +118,7 @@ class ReportingController extends Controller
         return view($this->viewFolder . "update", [
             'title' => $this->viewName,
             'baseroute' => $this->baseRoute,
-            'breadcrumb' => ['home' => route('operator.dashboard'), 'reporting' => route($this->baseRoute.'index'), 'edit' => null],
+            'breadcrumb' => ['Home' => route('operator.dashboard'), 'Reporting' => route($this->baseRoute.'index'), 'Edit' => null],
             'reportingtype' => ReportingType::get(),
             'submissiontype' => SubmissionType::get(),
             'explanationtype' => ExplanationType::get(),
