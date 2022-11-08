@@ -16,7 +16,7 @@ class DailyReportController extends Controller
 {
     protected $baseRoute = 'admin.report.';
     protected $viewFolder = 'form.dailyreport.';
-    protected $viewName = "Pelaporan KTP";
+    protected $viewName = "Laporan Harian";
 
 
     public function index(Request $request)
@@ -42,7 +42,7 @@ class DailyReportController extends Controller
         return view($this->viewFolder. 'index', [
             'title' => $this->viewName,
             'baseroute' => $this->baseRoute,
-            'breadcrumb' => ['Home' => route('admin.dashboard'), 'Report' => null],
+            'breadcrumb' => ['home' => route('admin.dashboard'), 'report' => null],
             'data' => $data,
         ]);
     }

@@ -37,7 +37,7 @@
     <div id="page-wrapper">
         <div class="header">
             <h1 class="page-header">
-                @if(!empty($title)) {{$title}} @else Selamat datang {{Auth::user()->username}} @endif<small>@if(!empty($subtitle)) {{$subtitle}}. @endif</small>
+                @if(!empty($title)) {{$title}} @else Selamat datang {{Auth::user()->userdetail->name}} @endif<small>@if(!empty($subtitle)) {{$subtitle}}. @endif</small>
             </h1>
             @if ($breadcrumb)
             <ol class="breadcrumb">
@@ -59,7 +59,7 @@
                     @yield('content')
                 </div>
             </div>
-            <footer><p>All right reserved. Copyright: <a href="http://dispendukcapil.malangkota.go.id/">Dispendukcapil2022</a></p></footer>
+            <footer><p>All right reserved. Template by: <a href="http://webthemez.com">WebThemez.com</a></p></footer>
         </div>
         <!-- /. PAGE INNER  -->
     </div>

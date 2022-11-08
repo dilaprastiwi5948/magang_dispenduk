@@ -5,8 +5,22 @@
                 <li>
                     <a class="@if(request()->routeis('admin.dashboard')) active-menu @endif" href="{{route('admin.dashboard')}}"><i class="fa fa-dashboard"></i> Dashboard</a>
                 </li>
-                <li>
+                {{-- <li>
                     <a class="@if(request()->routeis('admin.reporting.*')) active-menu @endif" href="{{route('admin.reporting.index')}}"><i class="fa fa-credit-card"></i> Pelaporan KTP</a>
+                </li>
+                <li>
+                    <a class="@if(request()->routeis('admin.reporting.*')) active-menu @endif" href="{{route('admin.reporting.create')}}"><i class="fa fa-credit-card"></i> Registrasi Pelapor</a>
+                </li> --}}
+                <li class="">
+                    <a href="#"><i class="fa fa-desktop"></i> Pelaporan KTP <span class="fa arrow"></span></a>
+                    <ul class="nav nav-second-level">
+                        <li>
+                            <a class="@if(request()->routeis('admin.reporting.*'))@endif" href="{{route('admin.reporting.create')}}"><i class="fa fa-edit"></i> Registrasi Pelapor</a>
+                        </li>
+                        <li>
+                            <a class="@if(request()->routeis('admin.reporting.*'))@endif" href="{{route('admin.reporting.index')}}"><i class="fa fa-credit-card"></i> Data Pelaporan</a>
+                        </li>            
+                    </ul>
                 </li>
                 <li>
                     <a class="@if(request()->routeis('operator.search.*')) active-menu @endif" href="{{route('operator.search.index')}}"><i class="fa fa-search"></i> Pencarian Data</a>
@@ -37,8 +51,19 @@
                 <li>
                     <a class="@if(request()->routeis('operator.dashboard')) active-menu @endif" href="{{route('operator.dashboard')}}"><i class="fa fa-dashboard"></i> Dashboard</a>
                 </li>
+                <li class="">
+                    <a href="#"><i class="fa fa-desktop"></i> Pelaporan KTP <span class="fa arrow"></span></a>
+                    <ul class="nav nav-second-level">
+                        <li>
+                            <a class="@if(request()->routeis('operator.reporting.*'))@endif" href="{{route('operator.reporting.create')}}"><i class="fa fa-edit"></i> Registrasi Pelapor</a>
+                        </li>
+                        <li>
+                            <a class="@if(request()->routeis('operator.reporting.*'))@endif" href="{{route('operator.reporting.index')}}"><i class="fa fa-credit-card"></i> Data Pelaporan</a>
+                        </li>            
+                    </ul>
+                </li>
                 <li>
-                    <a class="@if(request()->routeis('operator.reporting.*')) active-menu @endif" href="{{route('operator.reporting.index')}}"><i class="fa fa-file-text"></i> Pelaporan KTP</a>
+                    <a class="@if(request()->routeis('operator.report.*')) active-menu @endif" href="{{route('admin.report.dailyreport')}}"><i class="fa fa-files-o"></i> Laporan harian</a>
                 </li>
                 <li>
                     <a class="@if(request()->routeis('operator.search.*')) active-menu @endif" href="{{route('operator.search.index')}}"><i class="fa fa-search"></i> Pencarian Data</a>

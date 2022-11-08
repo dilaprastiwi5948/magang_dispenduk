@@ -37,7 +37,7 @@ class DashboardController extends Controller
     public function profile()
     {
         return view('form.admin.profile', [
-            'title' => "Profile Admin",
+            'title' => "Profile Operator",
             'subtitle' => null,
             'baseroute' => 'admin.dashboard',
             'breadcrumb' => ['Home' => route('admin.dashboard'), 'Profile' => null],

@@ -59,7 +59,7 @@
                         </div>
                     </div>
                 </div>
-                <div>
+                {{-- <div>
                     <label for="">Laporan operator</label>
                     <table class="table table-bordered">
                         <thead>
@@ -98,9 +98,72 @@
                             @endforeach
                         </tbody>
                     </table>
+                </div> --}}
+                <div class="row">
+                    <div class="col-md-6">
+                      <!--   Kitchen Sink -->
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                Laporan operator
+                            </div>
+                            <div class="panel-body">
+                                <div class="table-responsive">
+                                    <table class="table table-striped table-bordered table-hover">
+                                        <thead>
+                                            <tr>
+                                                <th>Nama Operator</th>
+                                                <th>Jumlah cetak</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            @foreach ($data->operator as $item)
+                                                <tr>
+                                                    <td>{{$item->user->username}}</td>
+                                                    <td>{{$item->total}} Pemohon</td>
+                                                </tr>
+                                            @endforeach
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                         <!-- End  Kitchen Sink -->
+                         </div>
+                    <div class="col-md-6">
+                         <!--   Basic Table  -->
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                Laporan pemohon berdasarkan permohonan
+                            </div>
+                            <div class="panel-body">
+                                <div class="table-responsive">
+                                    <table class="table">
+                                        <thead>
+                                            <tr>
+                                                <th>Nama Kategori</th>
+                                                <th>Jumlah cetak</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            @foreach ($data->category as $item)
+                                                @foreach ($item as $value)
+                                                    <tr>
+                                                        <td>{{$value->name}}</td>
+                                                        <td>{{$value->total ?? 0}} Pemohon</td>
+                                                    </tr>
+                                                @endforeach
+                                            @endforeach
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                          <!-- End  Basic Table  -->
+                    </div>
                 </div>
-                <div>
-                    <label for="">Pemohon hari ini</label>
+                
+                <div class="panel panel-default" id="printable">
+                    <div class="table-responsive">
+                    <label for="">Pemohon pada tanggal {{date('d F Y', strtotime(request()->get('date')))}}</label>
                     <table class="table dataTables">
                         <thead>
                             <tr>
@@ -138,6 +201,7 @@
                         </tbody>
                     </table>
                 </div>
+                </div>
             </div>
             <div class="panel-footer nonprintable" >
                 <button onclick="print()" class="btn btn-primary"><i class="fa fa-print"></i> Print</button>
@@ -161,5 +225,8 @@
             w.print();
             w.close();
         }
+        $(document).ready(function () {
+            $('.dataTables').dataTable();
+        });
     </script>
 @endpush

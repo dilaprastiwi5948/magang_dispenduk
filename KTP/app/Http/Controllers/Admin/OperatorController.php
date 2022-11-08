@@ -30,7 +30,7 @@ class OperatorController extends Controller
         return view($this->viewFolder . "index", [
             'title' => $this->viewName,
             'baseroute' => $this->baseRoute,
-            'breadcrumb' => ['Home' => route('admin.dashboard'), 'Operator' => null],
+            'breadcrumb' => ['home' => route('admin.dashboard'), 'opearator' => null],
             'datas' => $this->model->with('userdetail')->withTrashed()->get()
         ]);
     }
@@ -45,7 +45,7 @@ class OperatorController extends Controller
         return view($this->viewFolder . "create", [
             'title' => $this->viewName,
             'baseroute' => $this->baseRoute,
-            'breadcrumb' => ['Home' => route('admin.dashboard'), 'Operator' => route($this->baseRoute.'index'), 'Create' => null],
+            'breadcrumb' => ['home' => route('admin.dashboard'), 'opearator' => route($this->baseRoute.'index'), 'create' => null],
         ]);
     }
 
@@ -61,7 +61,7 @@ class OperatorController extends Controller
             'name' => 'required|string',
             'nik' => 'required|min:16|numeric',
             'position' => 'required|string',
-            'username' => 'required|min:5',
+            'username' => 'required',
             'password' => 'required|min:7',
             'is_admin' => 'required'
         ]);
@@ -105,7 +105,7 @@ class OperatorController extends Controller
         return view($this->viewFolder . "update", [
             'title' => $this->viewName,
             'baseroute' => $this->baseRoute,
-            'breadcrumb' => ['Home' => route('admin.dashboard'), 'Operator' => route($this->baseRoute.'index'), 'Edit' => null],
+            'breadcrumb' => ['home' => route('admin.dashboard'), 'opearator' => route($this->baseRoute.'index'), 'edit' => null],
             'data' => $this->model->withTrashed()->with('userdetail')->whereId($id)->first()
         ]);
     }
@@ -123,7 +123,7 @@ class OperatorController extends Controller
             'name' => 'required|string',
             'nik' => 'required|min:16|numeric',
             'position' => 'required|string',
-            'username' => 'required|min:5',
+            'username' => 'required',
             'is_admin' => 'required'
         ]);
         $oldUser = User::withTrashed()->whereId($id)->first();

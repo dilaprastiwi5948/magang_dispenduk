@@ -87,7 +87,7 @@ class ReportingController extends Controller
             'typeToast' => 'success',
             'messageToast' => 'Berhasil menambahkan data.',
         );
-        return redirect()->route($this->baseRoute.'index')->with($toast);
+        return redirect()->route($this->baseRoute.'create')->with($toast);
     }
 
     /**
