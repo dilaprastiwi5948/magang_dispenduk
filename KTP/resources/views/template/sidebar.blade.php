@@ -26,7 +26,7 @@
                     <a class="@if(request()->routeis('operator.search.*')) active-menu @endif" href="{{route('operator.search.index')}}"><i class="fa fa-search"></i> Pencarian Data</a>
                 </li>
                 <li>
-                    <a class="@if(request()->routeis('admin.report.*')) active-menu @endif" href="{{route('admin.report.dailyreport')}}"><i class="fa fa-files-o"></i> Laporan harian</a>
+                    <a class="@if(request()->routeis('admin.report.*')) active-menu @endif" href="{{route('admin.report.dailyreport')}}"><i class="fa fa-files-o"></i> Laporan Harian</a>
                 </li>
                 <li>
                     <a class="@if(request()->routeis('admin.operator.*')) active-menu @endif" href="{{route('admin.operator.index')}}"><i class="fa fa-dashboard"></i> Manajemen Operator</a>
@@ -63,7 +63,7 @@
                     </ul>
                 </li>
                 <li>
-                    <a class="@if(request()->routeis('operator.report.*')) active-menu @endif" href="{{route('admin.report.dailyreport')}}"><i class="fa fa-files-o"></i> Laporan harian</a>
+                    <a class="@if(request()->routeis('operator.report.*')) active-menu @endif" href="{{route('admin.report.dailyreport')}}"><i class="fa fa-files-o"></i> Laporan Harian</a>
                 </li>
                 <li>
                     <a class="@if(request()->routeis('operator.search.*')) active-menu @endif" href="{{route('operator.search.index')}}"><i class="fa fa-search"></i> Pencarian Data</a>

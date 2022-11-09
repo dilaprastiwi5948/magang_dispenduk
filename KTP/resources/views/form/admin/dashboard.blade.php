@@ -87,63 +87,52 @@
         <script>
         Highcharts.chart('charts', {
             chart: {
-                type: 'bar'
+                type: 'column'
             },
             title: {
                 text: 'Laporan Pemohon Berdasarkan Pemohon'
             },
             xAxis: {
-                categories: ['Online', 'Dinas', 'Kelurahan', 'MPP'],
-                title: {
-                    text: null
-                }
+                categories: [
+                    'Online',
+                    'Dinas',
+                    'Kelurahan',
+                    'MPP',
+                    'Rusak',
+                    'Kehilangan',
+                    'Pemula',
+                    'Perubahan Data',
+                    'Paket',
+                    'Surat Keterangan',
+                ],
+                crosshair: true
             },
             yAxis: {
-                min: 0,
                 title: {
-                    text: 'Jumlah Cetak',
-                    align: 'high'
-                },
-                labels: {
-                    overflow: 'justify'
+                    useHTML: true,
+                    text: 'Jumlah Cetak'
                 }
             },
             tooltip: {
-                valueSuffix: ' Orang'
+                headerFormat: '<span style="font-size:10px">{point.key}</span><table>',
+                pointFormat: '<tr><td style="color:{series.color};padding:0">{series.name}: </td>' +
+                    '<td style="padding:0"><b>{point.y:.1f}</b></td></tr>',
+                footerFormat: '</table>',
+                shared: true,
+                useHTML: true
             },
             plotOptions: {
-                bar: {
-                    dataLabels: {
-                        enabled: true
-                    }
+                column: {
+                    pointPadding: 0.2,
+                    borderWidth: 0
                 }
             },
-            legend: {
-                layout: 'vertical',
-                align: 'right',
-                verticalAlign: 'top',
-                x: -40,
-                y: 80,
-                floating: true,
-                borderWidth: 1,
-                backgroundColor: Highcharts.defaultOptions.legend.backgroundColor || '#FFFFFF',
-                shadow: true
-            },
-            credits: {
-                enabled: false
-            },
             series: [{
-                name: 'Online',
-                data: [ {{ $value->total ?? 0 }}, {{ $value->total ?? 0 }}, {{ $value->total ?? 0 }}, {{ $value->total ?? 0 }} ]
-            }, {
-                name: 'Dinas',
-                data: [ {{ $value->total ?? 0 }}, {{ $value->total ?? 0 }}, {{ $value->total ?? 0 }}, {{ $value->total ?? 0 }}]
-            }, {
-                name: 'Kelurahan',
-                data: [ {{ $value->total ?? 0 }}, {{ $value->total ?? 0 }}, {{ $value->total ?? 0 }}, {{ $value->total ?? 0 }} ]
-            }, {
-                name: 'MPP',
-                data: [ {{ $value->total ?? 0 }}, {{ $value->total ?? 0 }}, {{ $value->total ?? 0 }}, {{ $value->total ?? 0 }} ]
+                name: 'Jumlah Cetak',
+                data: [{{$value->total ?? 0}}, {{$value->total ?? 0}}, {{$value->total ?? 0}}, {{$value->total ?? 0}}, {{$value->total ?? 0}}, {{$value->total ?? 0}}, {{$value->total ?? 0}},
+                {{$value->total ?? 0}}, {{$value->total ?? 0}}, {{$value->total ?? 0}}
+                ]
+
             }]
         });
         </script>
