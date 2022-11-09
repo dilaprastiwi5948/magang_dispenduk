@@ -13,6 +13,7 @@
                 <div class="thumbnail">
                     <div class="caption">
                         <h4>Jumlah pemohon</h4>
+                        <i class="fa fa-users fa-2x text-gray-300"></i>
                         <h4><span class="label label-primary">{{$data->total_all}} Pemohon</span></h4>
                     </div>
                 </div>
@@ -21,6 +22,7 @@
                 <div class="thumbnail">
                     <div class="caption">
                         <h4>Jumlah pemohon dalam daerah</h4>
+                        <i class="fa fa-users fa-2x text-gray-300"></i>
                         <h4><span class="label label-primary">{{$data->total_in_area}} pemohon</span></h4>
                     </div>
                 </div>
@@ -29,6 +31,7 @@
                 <div class="thumbnail">
                     <div class="caption">
                         <h4>Jumlah pemohon luar daerah</h4>
+                        <i class="fa fa-users fa-2x text-gray-300"></i>
                         <h4><span class="label label-primary">{{$data->total_out_area}} pemohon</span></h4>
                     </div>
                 </div>

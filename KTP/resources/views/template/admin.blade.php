@@ -23,6 +23,7 @@
 <script src="{{ asset('assets/js/dataTables/jquery.dataTables.js') }}"></script>
 <script src="{{ asset('assets/js/dataTables/dataTables.bootstrap.js') }}"></script>
 <script src="{{ asset('assets/js/select2.full.min.js') }}"></script>
+
 <!-- Custom Js -->
 <script src="{{ asset('assets/js/custom-scripts.js') }}"></script>
 
@@ -59,6 +60,7 @@
                     @yield('content')
                 </div>
             </div>
+            @yield('chart')
             <footer><p>All right reserved. Copyright: <a href="http://dispendukcapil.malangkota.go.id/">Dispendukcapil2022</a></p></footer>
         </div>
         <!-- /. PAGE INNER  -->
