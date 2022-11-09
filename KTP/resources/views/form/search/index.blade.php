@@ -19,8 +19,6 @@
                             <label for="nik">NIK Pelapor</label>
                             <input type="text" name="nik" id="nik" class="form-control">
                         </div>
-                    </div>
-                    <div class="col-sm-6">
                         <div class="form-group ">
                             <label for="reportingtype_id">Jenis Pelaporan</label>
                             <select class="form-control" id="reportingtype_id" name="reportingtype_id">
@@ -29,6 +27,8 @@
                                 @endforeach
                             </select>
                         </div>
+                    </div>
+                    <div class="col-sm-6">                       
                         <div class="form-group">
                             <label for="explanationtype_id">Jenis Pengajuan</label>
                             <select class="form-control" id="explanationtype_id" name="explanationtype_id">
@@ -59,6 +59,9 @@
                 <a href="{{route($baseroute.'.index')}}" class="btn btn-primary btn-block"><i class="fa fa-reload"></i> Reset</a>
             </div>
         </form>
+        
+        <div class="panel panel-default" id="printable">
+        <div class="table-responsive">
         <table class="table dataTables">
             <thead>
                 <tr>
@@ -95,6 +98,8 @@
                 @endforeach
             </tbody>
         </table>
+        </div>
+        </div>
     </div>
 </div>
 
@@ -107,7 +112,6 @@
             $('#submissiontype_id').val(null).trigger('change');
             $('#explanationtype_id').val(null).trigger('change');
             $('#operator').val(null).trigger('change');
-
             $('.dataTables').dataTable();
         })
     </script>

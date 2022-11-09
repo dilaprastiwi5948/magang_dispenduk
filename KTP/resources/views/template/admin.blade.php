@@ -38,7 +38,7 @@
     <div id="page-wrapper">
         <div class="header">
             <h1 class="page-header">
-                @if(!empty($title)) {{$title}} @else Selamat datang {{Auth::user()->username}} @endif<small>@if(!empty($subtitle)) {{$subtitle}}. @endif</small>
+                @if(!empty($title)) {{$title}} @else Selamat datang {{Auth::user()->userdetail->name}} @endif<small>@if(!empty($subtitle)) {{$subtitle}}. @endif</small>
             </h1>
             @if ($breadcrumb)
             <ol class="breadcrumb">

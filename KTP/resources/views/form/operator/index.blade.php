@@ -9,7 +9,7 @@
     </div> --}}
     <div class="panel-body">
         <div style="margin-bottom: 1rem;">
-            <a href="{{route($baseroute.'create')}}" class="btn btn-primary">Buat {{strtolower($title)}} baru</a>
+            <a href="{{route($baseroute.'create')}}" class="btn btn-primary"><i class="fa fa-plus"></i> Buat {{strtolower($title)}} baru</a>
         </div>
         <div class="table-responsive">
             <table class="table dataTables">
@@ -31,7 +31,7 @@
                             <td>{{$item->userdetail->nik}}</td>
                             <td>{{$item->userdetail->position}}</td>
                             <td><div class="label label-{{!$item->is_admin ? "warning" : "primary"}}">{{!$item->is_admin ? "Operator" : "Admin"}}</div></td>
-                            <td style="display: flex">
+                            <td style="display: flex; gap: 0.5rem">
                                 <a href="{{route($baseroute.'edit', $item->id)}}" class="btn btn-sm btn-primary"><span class="glyphicon glyphicon-pencil"></span></a>
                                 <form action="{{ route($baseroute.'destroy', $item->id ) }}" method="post">
                                     @csrf
