@@ -53,5 +53,6 @@ Route::middleware(['auth'])->prefix('admin')->name('admin.')->group(function() {
     Route::resource('/operator', OperatorController::class)->except('show');
 
     Route::get('report/dailyreport', [DailyReportController::class, 'index'])->name('report.dailyreport');
+    Route::get('report/dailyreport/print', [DailyReportController::class, 'print'])->name('report.dailyreport.print');
     Route::get('search', [SearchController::class, 'index'])->name('search.index');
 });

@@ -29,21 +29,21 @@ class ReportingIdCard extends Model
 
     public function ExplanationType()
     {
-        return $this->hasOne(ExplanationType::class, 'id', 'explanationtype_id');
+        return $this->hasOne(ExplanationType::class, 'id', 'explanationtype_id')->withTrashed();
     }
 
     public function ReportingType()
     {
-        return $this->hasOne(ReportingType::class, 'id', 'reportingtype_id');
+        return $this->hasOne(ReportingType::class, 'id', 'reportingtype_id')->withTrashed();
     }
 
     public function SubmissionType()
     {
-        return $this->hasOne(SubmissionType::class, 'id', 'submissiontype_id');
+        return $this->hasOne(SubmissionType::class, 'id', 'submissiontype_id')->withTrashed();
     }
 
     public function User()
     {
-        return $this->hasOne(User::class, 'id', 'created_by');
+        return $this->hasOne(User::class, 'id', 'created_by')->withTrashed();
     }
 }
