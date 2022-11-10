@@ -35,6 +35,7 @@
                     <label for="date">Tanggal filter laporan</label>
                     <input type="date" class="form-control" required name="date">
                 </div>
+
                 <button type="submit" class="btn btn-success btn-block"><i class="fa fa-search"></i> Cari</button>
             </div> --}}
         </form>
@@ -138,7 +139,7 @@
                         <label for="">Pemohon pada tanggal {{date('d F Y', strtotime(request()->get('date')))}}</label>
                     </div>
                     <div class="table-responsive">
-                        <table class="table">
+                        <table class="table dataTables">
                             <thead>
                                 <tr>
                                     <th>NIK</th>

@@ -47,7 +47,7 @@ class ReportingController extends Controller
         return view($this->viewFolder . "create", [
             'title' => $this->viewName,
             'baseroute' => $this->baseRoute,
-            'breadcrumb' => ['HOME' => route('admin.dashboard'), 'DATA PELAPOR' => route($this->baseRoute.'index'), 'CREATE' => null],
+            'breadcrumb' => ['HOME' => route('admin.dashboard'), 'DATA PELAPOR' => route($this->baseRoute.'index'), 'BUAT' => null],
             'reportingtype' => ReportingType::get(),
             'submissiontype' => SubmissionType::get(),
             'explanationtype' => ExplanationType::get(),

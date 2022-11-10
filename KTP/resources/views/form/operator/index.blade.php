@@ -19,6 +19,7 @@
                         <th>Name</th>
                         <th>NIK</th>
                         <th>Jabatan</th>
+                        <th>Dibuat</th>
                         <th>User role</th>
                         <th>Action</th>
                     </tr>
@@ -30,6 +31,7 @@
                             <td>{{$item->userdetail->name}}</td>
                             <td>{{$item->userdetail->nik}}</td>
                             <td>{{$item->userdetail->position}}</td>
+                            <td>{{$item->userdetail->created_at}}</td>
                             <td><div class="label label-{{!$item->is_admin ? "warning" : "primary"}}">{{!$item->is_admin ? "Operator" : "Admin"}}</div></td>
                             <td style="display: flex; gap: 0.5rem">
                                 <a href="{{route($baseroute.'edit', $item->id)}}" class="btn btn-sm btn-primary"><span class="glyphicon glyphicon-pencil"></span></a>
