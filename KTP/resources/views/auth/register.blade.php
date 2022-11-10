@@ -16,29 +16,27 @@
                     <div class="card border-0 shadow rounded-3 my-5">
                         <div class="card-body p-4 p-sm-5">
                             <h5 class="card-title text-center mb-5 fw-dark fs-5">
-                                <img src="https://turbo.net.id/wp-content/webp-express/webp-images/uploads/2020/12/19196952-removebg-preview.png.webp"
+                                <img src=" {{url('/assets/img/10.png')}} "
                                     class="rounded-circle" style="width: 150px;" alt="Avatar" /><br>
                                 REGISTER
                             </h5>
                             <form action="{{ route('register.submit') }}" method="POST">
                                 @csrf
-                                <div class="row">
-                                    <div class="col-md-6 mb-2">
-                                        <label>NIK</label>
-                                        <input type="text" class="form-control" id="inputnik"
-                                            placeholder="Nomor Induk Keluarga" name="nik" value="{{old('nik')}}">
-                                        @error('nik')
-                                        <small id="nikid" class="text-danger">{{$message}}</small>
-                                        @enderror
-                                    </div>
-                                    <div class="col-md-6 mb-2">
-                                        <label>Nama</label>
-                                        <input type="text" class="form-control" id="inputname"
-                                            placeholder="Nama Lengkap" name="name" value="{{old('name')}}">
-                                        @error('name')
-                                        <small id="nameid" class="text-danger">{{$message}}</small>
-                                        @enderror
-                                    </div>
+                                <div class="col-md-12 mb-2">
+                                    <label>NIK</label>
+                                    <input type="text" class="form-control" id="inputnik"
+                                        placeholder="Nomor Induk Keluarga" name="nik" value="{{old('nik')}}">
+                                    @error('nik')
+                                    <small id="nikid" class="text-danger">{{$message}}</small>
+                                    @enderror
+                                </div>
+                                <div class="col-md-12 mb-2">
+                                    <label>Nama</label>
+                                    <input type="text" class="form-control" id="inputname" placeholder="Nama Lengkap"
+                                        name="name" value="{{old('name')}}">
+                                    @error('name')
+                                    <small id="nameid" class="text-danger">{{$message}}</small>
+                                    @enderror
                                 </div>
                                 <div class="col-md-12 mb-2">
                                     <label>Jabatan</label>
