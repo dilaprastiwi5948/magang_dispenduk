@@ -8,6 +8,16 @@
         @media print {
             .nonprintable {display: none;}
         }
+        .margin-tanggal {
+            margin-left: 18px;
+            margin-bottom: 20px;
+        }
+        .border-total {
+            border: 3px solid rgb(54, 106, 201);
+        }
+        .border {
+            border-color:rgb(54, 106, 201);
+        }
     </style>
 @endpush
 
@@ -18,7 +28,7 @@
             <div class="panel-heading">
                 Cari laporan berdasarkan tanggal
             </div>
-            <div>
+            <div class="margin-tanggal">
             <form class="form-inline">
                 <strong><p>Tanggal filter laporan</p></strong>
                 <div class="form-group mx-sm-3 mb-2">
@@ -48,15 +58,15 @@
             <div class="panel-body">
                 <div class="row">
                     <div class="col-sm-4">
-                        <div class="thumbnail">
+                        <div class="thumbnail border-total">
                             <div class="caption">
-                                <h4>Jumlah pemohon</h4>
+                                <h4><strong>Total jumlah pemohon</strong></h4>
                                 <h4><span class="label label-primary">{{$data->total_all}} Pemohon</span></h4>
                             </div>
                         </div>
                     </div>
                     <div class="col-sm-4">
-                        <div class="thumbnail">
+                        <div class="thumbnail border">
                             <div class="caption">
                                 <h4>Jumlah pemohon dalam daerah</h4>
                                 <h4><span class="label label-primary">{{$data->total_in_area}} pemohon</span></h4>
@@ -64,7 +74,7 @@
                         </div>
                     </div>
                     <div class="col-sm-4">
-                        <div class="thumbnail">
+                        <div class="thumbnail border">
                             <div class="caption">
                                 <h4>Jumlah pemohon luar daerah</h4>
                                 <h4><span class="label label-primary">{{$data->total_out_area}} pemohon</span></h4>
