@@ -61,6 +61,8 @@
                 </div>
             </div>
             @yield('chart')
+
+            @stack('scripts')
             <footer><p>All right reserved. Copyright: <a href="http://dispendukcapil.malangkota.go.id/">Dispendukcapil2022</a></p></footer>
         </div>
         <!-- /. PAGE INNER  -->
