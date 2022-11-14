@@ -23,7 +23,7 @@
                             <div class="col-md-12 mb-2">
                                 <label>Username</label>
                                 <input type="text" class="form-control" id="inputUsername" name="username"
-                                    placeholder="Username" autofocus>
+                                    placeholder="Username"  autofocus value="{{old('username')}}">
                                 @error('username')
                                 <small id="usernameid" class="text-danger">{{$message}}</small>
                                 @enderror
