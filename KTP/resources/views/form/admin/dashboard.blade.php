@@ -24,26 +24,26 @@
                 <div class="thumbnail border-total ">
                     <div class="caption">
                         <h4><strong>Total jumlah pemohon</strong></h4>
-                        <a href="{{route('operator.reporting.index')}}"><i class="fa fa-users fa-2x text-gray-300"></i></a>
-                        <h4><span class="label label-primary">{{$data->total_all}} Pemohon</span></h4>
+                        <a href="{{route('admin.reporting.index')}}"><i class="fa fa-users fa-2x text-gray-300"></i></a>
+                        <h4><a href="{{route('admin.reporting.index')}}" class="label label-primary">{{$data->total_all}} Pemohon</a></h4>
                     </div>
                 </div>
             </div>
             <div class="col-sm-4">
-                <div class="thumbnail border">
+                <div class="thumbnail border-total">
                     <div class="caption">
-                        <h4>Jumlah pemohon dalam daerah</h4>
-                        <i class="fa fa-users fa-2x text-gray-300"></i>
-                        <h4><span class="label label-primary">{{$data->total_in_area}} pemohon</span></h4>
+                        <h4><strong>Total pemohon dalam daerah</strong></h4>
+                        <a href="{{route('admin.reporting.index')}}"><i class="fa fa-users fa-2x text-gray-300"></i></a>
+                        <h4><a href="{{route('admin.reporting.index')}}" class="label label-success">{{$data->total_in_area}} pemohon</a></h4>
                     </div>
                 </div>
             </div>
             <div class="col-sm-4">
-                <div class="thumbnail border">
+                <div class="thumbnail border-total">
                     <div class="caption">
-                        <h4>Jumlah pemohon luar daerah</h4>
-                        <i class="fa fa-users fa-2x text-gray-300"></i>
-                        <h4><span class="label label-primary">{{$data->total_out_area}} pemohon</span></h4>
+                        <h4><strong>Total pemohon luar daerah</strong></h4>
+                        <a href="{{route('admin.reporting.index')}}"><i class="fa fa-users fa-2x text-gray-300"></i></a>
+                        <h4><a href="{{route('admin.reporting.index')}}" class="label label-danger">{{$data->total_out_area}} pemohon</a></h4>
                     </div>
                 </div>
             </div>
