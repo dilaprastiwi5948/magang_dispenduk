@@ -1,5 +1,16 @@
 @extends('template.admin')
 
+@push('style')
+    <style>
+        .border-total {
+            border: 3px solid rgb(54, 106, 201);
+        }
+        .border {
+            border-color:rgb(54, 106, 201);
+        }
+    </style>
+@endpush
+
 @section('content')
 <div class="panel panel-default">
     <div class="panel-heading">
@@ -10,16 +21,16 @@
     <div class="panel-body">
         <div class="row">
             <div class="col-sm-4">
-                <div class="thumbnail">
+                <div class="thumbnail border-total ">
                     <div class="caption">
-                        <h4>Jumlah pemohon</h4>
+                        <h4><strong>Total jumlah pemohon</strong></h4>
                         <a href="{{route('operator.reporting.index')}}"><i class="fa fa-users fa-2x text-gray-300"></i></a>
                         <h4><span class="label label-primary">{{$data->total_all}} Pemohon</span></h4>
                     </div>
                 </div>
             </div>
             <div class="col-sm-4">
-                <div class="thumbnail">
+                <div class="thumbnail border">
                     <div class="caption">
                         <h4>Jumlah pemohon dalam daerah</h4>
                         <i class="fa fa-users fa-2x text-gray-300"></i>
@@ -28,7 +39,7 @@
                 </div>
             </div>
             <div class="col-sm-4">
-                <div class="thumbnail">
+                <div class="thumbnail border">
                     <div class="caption">
                         <h4>Jumlah pemohon luar daerah</h4>
                         <i class="fa fa-users fa-2x text-gray-300"></i>
