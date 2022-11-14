@@ -63,6 +63,15 @@
                                     <small id=" passwordid" class="text-danger">{{$message}}</small>
                                     @enderror
                                 </div>
+                                <div class="col-md-12 mb-2">
+                                    <label>Confirm Password</label>
+                                    <input id="password-confirm" type="password" class="form-control"
+                                        name="password_confirmation" autocomplete="new-password"
+                                        placeholder="Confirm Password">
+                                    @error('password')
+                                    <small id=" passwordid" class="text-danger">{{$message}}</small>
+                                    @enderror
+                                </div>
                                 <div class="d-grid">
                                     <button class="btn btn-primary btn-login text-uppercase fw-bold"
                                         type="submit">Register</button>

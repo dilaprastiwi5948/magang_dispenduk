@@ -28,7 +28,7 @@ class RegisterRequest extends FormRequest
             'name' => 'required',
             'jabatan' => 'required',
             'username' => 'required|unique:users',
-            'password' => 'required|min:7'
+            'password' => 'required|min:7|confirmed'
         ];
     }
 }
