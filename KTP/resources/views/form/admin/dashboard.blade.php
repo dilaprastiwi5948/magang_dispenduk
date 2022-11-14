@@ -33,8 +33,8 @@
                 <div class="thumbnail border-total">
                     <div class="caption">
                         <h4><strong>Total pemohon dalam daerah</strong></h4>
-                        <a href="{{route('admin.reporting.index')}}"><i class="fa fa-users fa-2x text-gray-300"></i></a>
-                        <h4><a href="{{route('admin.reporting.index')}}" class="label label-success">{{$data->total_in_area}} pemohon</a></h4>
+                        <i class="fa fa-users fa-2x text-gray-300"></i>
+                        <h4><p class="label label-success">{{$data->total_in_area}} pemohon</p></h4>
                     </div>
                 </div>
             </div>
@@ -42,8 +42,8 @@
                 <div class="thumbnail border-total">
                     <div class="caption">
                         <h4><strong>Total pemohon luar daerah</strong></h4>
-                        <a href="{{route('admin.reporting.index')}}"><i class="fa fa-users fa-2x text-gray-300"></i></a>
-                        <h4><a href="{{route('admin.reporting.index')}}" class="label label-danger">{{$data->total_out_area}} pemohon</a></h4>
+                        <i class="fa fa-users fa-2x text-gray-300"></i><
+                        <h4><p class="label label-danger">{{$data->total_out_area}} pemohon</p></h4>
                     </div>
                 </div>
             </div>
@@ -90,7 +90,7 @@
                 </tbody>
             </table>
         </div>
-        <div class="panel">
+        {{-- <div class="panel">
             <div id="charts"></div>
         </div>
         @section('chart')
@@ -147,7 +147,7 @@
             }]
         });
         </script>
-        @endsection
+        @endsection --}}
     </div>
 </div>
 @endsection

@@ -69,7 +69,7 @@
                         <div class="thumbnail border">
                             <div class="caption">
                                 <h4>Jumlah pemohon dalam daerah</h4>
-                                <h4><span class="label label-primary">{{$data->total_in_area}} pemohon</span></h4>
+                                <h4><span class="label label-success">{{$data->total_in_area}} pemohon</span></h4>
                             </div>
                         </div>
                     </div>
@@ -77,7 +77,7 @@
                         <div class="thumbnail border">
                             <div class="caption">
                                 <h4>Jumlah pemohon luar daerah</h4>
-                                <h4><span class="label label-primary">{{$data->total_out_area}} pemohon</span></h4>
+                                <h4><span class="label label-danger">{{$data->total_out_area}} pemohon</span></h4>
                             </div>
                         </div>
                     </div>
