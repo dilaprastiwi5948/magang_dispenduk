@@ -13,6 +13,8 @@
             <div class="form-group @error('reportingtype_id') has-error @enderror">
                 <label for="reportingtype_id">Jenis Pelaporan</label>
                 <select class="form-control" id="reportingtype_id" name="reportingtype_id">
+                    <option selected disabled value="">Pilih Jenis Pelaporan...</option>
+
                     @foreach ($reportingtype as $item)
                         <option value="{{$item->id}}">{{$item->name}}</option>
                     @endforeach
@@ -24,6 +26,8 @@
             <div class="form-group @error('explanationtype_id') has-error @enderror">
                 <label for="explanationtype_id">Jenis Pengajuan</label>
                 <select class="form-control" id="explanationtype_id" name="explanationtype_id">
+                    <option selected disabled value="">Pilih Jenis Pengajuan...</option>
+
                     @foreach ($explanationtype as $item)
                         <option value="{{$item->id}}">{{$item->name}}</option>
                     @endforeach
@@ -35,6 +39,8 @@
             <div class="form-group @error('submissiontype_id') has-error @enderror">
                 <label for="submissiontype_id">Keterangan</label>
                 <select class="form-control" id="submissiontype_id" name="submissiontype_id">
+                    <option selected disabled value="">Pilih Keterangan...</option>
+
                     @foreach ($submissiontype as $item)
                         <option value="{{$item->id}}">{{$item->name}}</option>
                     @endforeach
@@ -116,7 +122,7 @@
                     </div>
                 </div>
             </div>
-            <button type="submit" class="btn btn-primary">Submit</button>
+            <button type="submit" class="btn btn-primary">Simpan</button>
             <a class="btn btn-default" href="{{route($baseroute.'index')}}">Kembali</a>
         </form>
     </div>

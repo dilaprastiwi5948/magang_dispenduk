@@ -6,22 +6,23 @@
     <div class="panel-body">
         <form method="GET" action="{{route($baseroute.'.index')}}" class="panel panel-primary">
             <div class="panel-heading">
-                Cari laporan
+                Cari Laporan
             </div>
             <div class="panel-body">
                 <div class="row">
                     <div class="col-sm-6">
                         <div class="form-group">
                             <label for="name">Nama Pelapor</label>
-                            <input type="text" name="name" id="name" class="form-control">
+                            <input type="text" name="name" id="name" class="form-control" placeholder="Nama Pelapor...">
                         </div>
                         <div class="form-group">
                             <label for="nik">NIK Pelapor</label>
-                            <input type="text" name="nik" id="nik" class="form-control">
+                            <input type="text" name="nik" id="nik" class="form-control" placeholder="NIK Pelapor...">
                         </div>
                         <div class="form-group ">
                             <label for="reportingtype_id">Jenis Pelaporan</label>
                             <select class="form-control" id="reportingtype_id" name="reportingtype_id">
+                                <option selected disabled value="">Pilih Jenis Pelaporan...</option>
                                 @foreach ($reportingtype as $item)
                                     <option value="{{$item->id}}">{{$item->name}}</option>
                                 @endforeach
@@ -32,6 +33,7 @@
                         <div class="form-group">
                             <label for="explanationtype_id">Jenis Pengajuan</label>
                             <select class="form-control" id="explanationtype_id" name="explanationtype_id">
+                                <option selected disabled value="">Pilih Jenis Pengajuan...</option>
                                 @foreach ($explanationtype as $item)
                                     <option value="{{$item->id}}">{{$item->name}}</option>
                                 @endforeach
@@ -40,6 +42,7 @@
                         <div class="form-group">
                             <label for="submissiontype_id">Keterangan</label>
                             <select class="form-control" id="submissiontype_id" name="submissiontype_id">
+                                <option selected disabled value="">Pilih Keterangan...</option>
                                 @foreach ($submissiontype as $item)
                                     <option value="{{$item->id}}">{{$item->name}}</option>
                                 @endforeach
@@ -48,6 +51,7 @@
                         <div class="form-group">
                             <label for="operator">Operator</label>
                             <select class="form-control" id="operator" name="operator">
+                                <option selected disabled value="">Pilih Operator...</option>
                                 @foreach ($operator as $item)
                                     <option value="{{$item->id}}">{{$item->username}}</option>
                                 @endforeach
@@ -55,8 +59,8 @@
                         </div>
                     </div>
                 </div>
-                <button type="submit" class="btn btn-success btn-block"><i class="fa fa-search"></i> Cari</button>
-                <a href="{{route($baseroute.'.index')}}" class="btn btn-primary btn-block"><i class="fa fa-reload"></i> Reset</a>
+                <button type="submit" class="btn btn-primary btn-block"><i class="fa fa-search"  style="font-size:20px">  Cari</i></button>
+                <a href="{{route($baseroute.'.index')}}" class="btn btn-danger btn-block"><i class="fa fa-refresh" style="font-size:20px">  Reset</i></a>
             </div>
         </form>
         

@@ -13,7 +13,7 @@
                 <div class="thumbnail">
                     <div class="caption">
                         <h4>Jumlah pemohon</h4>
-                        <i class="fa fa-users fa-2x text-gray-300"></i>
+                        <a href="{{route('operator.reporting.index')}}"><i class="fa fa-users fa-2x text-gray-300"></i></a>
                         <h4><span class="label label-primary">{{$data->total_all}} Pemohon</span></h4>
                     </div>
                 </div>
