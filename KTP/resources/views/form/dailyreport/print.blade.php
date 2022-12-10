@@ -118,7 +118,7 @@
                         <!-- End  Basic Table  -->
                     </div>
                 </div>
-                <div class="panel panel-default" id="printable">
+                {{-- <div class="panel panel-default" id="printable">
                     <div class="panel-heading">
                         <label for="">Pemohon pada tanggal {{date('d F Y', strtotime(request()->get('date')))}}</label>
                     </div>
@@ -158,7 +158,7 @@
                         </table>
                     </div>
                 </div>
-            </div>
+            </div> --}}
         </div>
     </div>
     <!-- jQuery Js -->
