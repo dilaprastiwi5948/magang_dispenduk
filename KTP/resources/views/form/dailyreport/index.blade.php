@@ -8,16 +8,6 @@
         @media print {
             .nonprintable {display: none;}
         }
-        .margin-tanggal {
-            margin-left: 18px;
-            margin-bottom: 20px;
-        }
-        .border-total {
-            border: 3px solid rgb(54, 106, 201);
-        }
-        .border {
-            border-color:rgb(54, 106, 201);
-        }
     </style>
 @endpush
 
@@ -28,7 +18,7 @@
             <div class="panel-heading">
                 Cari laporan berdasarkan tanggal
             </div>
-            <div class="margin-tanggal">
+            <div>
             <form class="form-inline">
                 <strong><p>Tanggal filter laporan</p></strong>
                 <div class="form-group mx-sm-3 mb-2">
@@ -45,7 +35,6 @@
                     <label for="date">Tanggal filter laporan</label>
                     <input type="date" class="form-control" required name="date">
                 </div>
-
                 <button type="submit" class="btn btn-success btn-block"><i class="fa fa-search"></i> Cari</button>
             </div> --}}
         </form>
@@ -58,65 +47,35 @@
             <div class="panel-body">
                 <div class="row">
                     <div class="col-sm-4">
-                        <div class="thumbnail border-total">
+                        <div class="thumbnail border-total ">
                             <div class="caption">
                                 <h4><strong>Total jumlah pemohon</strong></h4>
-                                <h4><span class="label label-primary">{{$data->total_all}} Pemohon</span></h4>
+                                <h4><p class="label label-primary">{{$data->total_all}} Pemohon</p></h4>
                             </div>
                         </div>
                     </div>
                     <div class="col-sm-4">
-                        <div class="thumbnail border">
+                        <div class="thumbnail border-total">
                             <div class="caption">
-                                <h4>Jumlah pemohon dalam daerah</h4>
-                                <h4><span class="label label-success">{{$data->total_in_area}} pemohon</span></h4>
+                                <h4><strong>Total pemohon dalam daerah</strong></h4>
+                                <h4><p class="label label-success">{{$data->total_in_area}} pemohon</p></h4>
                             </div>
                         </div>
                     </div>
                     <div class="col-sm-4">
-                        <div class="thumbnail border">
+                        <div class="thumbnail border-total">
                             <div class="caption">
-                                <h4>Jumlah pemohon luar daerah</h4>
-                                <h4><span class="label label-danger">{{$data->total_out_area}} pemohon</span></h4>
+                                <h4><strong>Total pemohon luar daerah</strong></h4>
+                                <h4><p class="label label-danger">{{$data->total_out_area}} pemohon</p></h4>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-md-6">
-                      <!--   Kitchen Sink -->
                         <div class="panel panel-default">
                             <div class="panel-heading">
-                                Laporan operator
-                            </div>
-                            <div class="panel-body">
-                                <div class="table-responsive">
-                                    <table class="table table-striped table-bordered table-hover">
-                                        <thead>
-                                            <tr>
-                                                <th>Nama Operator</th>
-                                                <th>Jumlah cetak</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            @foreach ($data->operator as $item)
-                                                <tr>
-                                                    <td>{{$item->user->username}}</td>
-                                                    <td>{{$item->total}} Pemohon</td>
-                                                </tr>
-                                            @endforeach
-                                        </tbody>
-                                    </table>
-                                </div>
-                            </div>
-                        </div>
-                         <!-- End  Kitchen Sink -->
-                         </div>
-                    <div class="col-md-6">
-                         <!--   Basic Table  -->
-                        <div class="panel panel-default">
-                            <div class="panel-heading">
-                                Laporan pemohon berdasarkan permohonan
+                                Laporan Berdasarkan Keterangan
                             </div>
                             <div class="panel-body">
                                 <div class="table-responsive">
@@ -128,19 +87,73 @@
                                             </tr>
                                         </thead>
                                         <tbody>
-                                            @foreach ($data->category as $item)
-                                                @foreach ($item as $value)
-                                                    <tr>
-                                                        <td>{{$value->name}}</td>
-                                                        <td>{{$value->total ?? 0}} Pemohon</td>
-                                                    </tr>
-                                                @endforeach
+                                            @foreach ($data->explanation as $item)
+                                                <tr>
+                                                    <td>{{$item->name}}</td>
+                                                    <td>{{$item->total ?? 0}} Pemohon</td>
+                                                </tr>
                                             @endforeach
                                     </table>
                                 </div>
                             </div>
                         </div>
-                          <!-- End  Basic Table  -->
+                    <!--   Kitchen Sink -->
+                        <!-- End  Kitchen Sink -->
+                    </div>
+                    <div class="col-md-6">
+                        <!--   Basic Table  -->
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                Laporan Berdasarkan Permohonan
+                            </div>
+                            <div class="panel-body">
+                                <div class="table-responsive">
+                                    <table class="table">
+                                        <thead>
+                                            <tr>
+                                                <th>Nama Kategori</th>
+                                                <th>Jumlah cetak</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            @foreach ($data->submission as $item)
+                                                <tr>
+                                                    <td>{{$item->name}}</td>
+                                                    <td>{{$item->total ?? 0}} Pemohon</td>
+                                                </tr>
+                                            @endforeach
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- End  Basic Table  -->
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            Laporan operator
+                        </div>
+                        <div class="panel-body">
+                            <div class="table-responsive">
+                                <table class="table table-striped table-bordered table-hover">
+                                    <thead>
+                                        <tr>
+                                            <th>Nama Operator</th>
+                                            <th>Jumlah cetak</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        @foreach ($data->operator as $item)
+                                            <tr>
+                                                <td>{{$item->user->username}}</td>
+                                                <td>{{$item->total}} Pemohon</td>
+                                            </tr>
+                                        @endforeach
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
